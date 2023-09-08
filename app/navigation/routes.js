@@ -1,0 +1,23 @@
+export default Object.freeze({
+LOADING:'Loading',
+WELCOME:'Welcome',
+EMERGENCY:'Emergency',
+EMERGENCYCONTACTS:'EmergencyContacts',
+SIGNUP:'SignUp',
+LOGIN:'LoginS',
+FORGETPASSWORD:'ForgetPassword',
+NEWPASSWORD:'NewPassword',
+CHECKMAIL:'CheckMail',
+HOME:'Home',
+HOMETAB:'HomeTab',
+ACCOUNT:'Account',
+ACCOUNTTAB:'AccountTab',
+EDIT_PROFILE:'EditProfile',
+CHILD_REPORT:'ChildReport',
+CHILD_ABUSE:'ChildAbuse',
+ENVIRONMENTAL_REPORT:'EnvironmentalReport',
+SECURITY_BOOKINGS:'SecurityBookings',
+SECURITY_BOOKINGS_FORM:'SecurityBookingsForm',
+CART:'Cart',
+CHAT:'Chat'
+});
