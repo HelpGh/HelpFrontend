@@ -9,14 +9,14 @@ import LoginScreen from "../Screens/auth/LoginScreen";
 import NewPasswordScreen from "../Screens/auth/NewPasswordScreen";
 import SignupScreen from "../Screens/auth/SignupScreen";
 import CartScreen from "../Screens/CartScreen";
-import ChatScreen from "../Screens/ChatScreen";
-import ChildReportScreen from "../Screens/ChildReportScreen";
-import EnvironmentalReportScreen from "../Screens/EnvironmentalReportScreen";
-import HomeScreen from "../Screens/HomeScreen";
-import SecurityBookingsFormScreen from "../Screens/SecurityBookingsFormScreen";
-import SecurityBookingsScreen from "../Screens/SecurityBookingsScreen";
+import ChatScreen from "../Screens/home/ChatScreen";
+import ChildReportScreen from "../Screens/home/ChildReportScreen";
+import EnvironmentalReportScreen from "../Screens/home/EnvironmentalReportScreen";
+import HomeScreen from "../Screens/home/HomeScreen";
+import SecurityBookingsFormScreen from "../Screens/home/SecurityBookingsFormScreen";
+import SecurityBookingsScreen from "../Screens/home/SecurityBookingsScreen";
 import WelcomeScreen from "../Screens/auth/WelcomeScreen";
-import ChildAbuseScreen from "../Screens/ChildAbuseScreen";
+import ChildAbuseScreen from "../Screens/home/ChildAbuseScreen";
 
 const LoadingStackScreen =({ navigation })=> <LoadingScreen navigation={navigation}/>
 const WelcomeStackScreen =({ navigation })=> <WelcomeScreen navigation={navigation}/>

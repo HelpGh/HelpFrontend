@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
-import AppHeader from '../components/AppHeader';
+import AppHeader from '../../components/AppHeader';
 import Constants from 'expo-constants';
-import AppTextInput from '../components/AppTextInput';
-import AppPicker from '../components/AppPicker';
-import pickersData from '../config/pickersData';
-import useAuth from '../auth/useAuth';
-import AppText from '../components/AppText';
-import AppDatePicker from '../components/AppDatePicker';
-import AppButton from '../components/AppButton';
-import colors from '../config/colors';
+import AppTextInput from '../../components/AppTextInput';
+import AppPicker from '../../components/AppPicker';
+import pickersData from '../../config/pickersData';
+import useAuth from '../../auth/useAuth';
+import AppText from '../../components/AppText';
+import AppDatePicker from '../../components/AppDatePicker';
+import AppButton from '../../components/AppButton';
+import colors from '../../config/colors';
 
 function SecurityBookingsFormScreen(props) {
     const [selectedRegion,setSelectedRegion]=useState(pickersData.Category[0]);

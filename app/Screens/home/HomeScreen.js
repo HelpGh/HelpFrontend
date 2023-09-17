@@ -3,24 +3,24 @@ import { View, StyleSheet, ImageBackground,Image, ScrollView, TouchableOpacity }
 import { Ionicons,EvilIcons,MaterialCommunityIcons } from '@expo/vector-icons';
 import Constants from 'expo-constants';
 
-import AppText from '../components/AppText';
-import useAuth from '../auth/useAuth';
-import colors from '../config/colors';
-import AppScrowEmojis from '../components/AppScrowEmojis';
-import AppScrowImages from '../components/AppScrowImages';
-import ViewAll from '../components/ViewAll';
-import routes from '../navigation/routes';
+import AppText from '../../components/AppText';
+import useAuth from '../../auth/useAuth';
+import colors from '../../config/colors';
+import AppScrowEmojis from '../../components/AppScrowEmojis';
+import AppScrowImages from '../../components/AppScrowImages';
+import ViewAll from '../../components/ViewAll';
+import routes from '../../navigation/routes';
 
 function HomeScreen({navigation}) {
     const {width,height} = useAuth();
 return (
 <ScrollView contentContainerStyle={styles.container}>
     <ImageBackground
-    source={require('../assets/images/Rectangle23.png')}
+    source={require('../../assets/images/Rectangle23.png')}
     style={{width:width,height:height*0.4}}>
         <View style={{flexDirection:'row',marginTop:'10%',justifyContent:'space-between',alignItems:'center',width:'90%',alignSelf:'center'}}>
             <View style={{flexDirection:'row',alignItems:'center'}}>
-            <Image source={require('../assets/images/man2.png')}/>
+            <Image source={require('../../assets/images/man2.png')}/>
             <View style={{marginLeft:'5%'}}>
                 <AppText fontFamily='PoppinsSemiBold' color={colors.white}>Hi Joe,</AppText>
                 <AppText fontFamily='PoppinsSemiBold' color={colors.white}>Welcome back!</AppText>
@@ -41,7 +41,7 @@ return (
                     screen:routes.CHILD_REPORT,
                     params:{item:''}})
             }}>
-                <Image source={require('../assets/images/box/healthicons_child-care.png')}/>
+                <Image source={require('../../assets/images/box/healthicons_child-care.png')}/>
                 <AppText fontSize={width*0.035} fontFamily='PoppinsSemiBold' textAlign='center'>Child Report</AppText>
             </TouchableOpacity>
             <TouchableOpacity style={styles.box}
@@ -50,11 +50,11 @@ return (
                     screen:routes.ENVIRONMENTAL_REPORT,
                     params:{item:''}})
             }}>
-            <Image source={require('../assets/images/box/env.png')}/>
+            <Image source={require('../../assets/images/box/env.png')}/>
                 <AppText fontSize={width*0.035} fontFamily='PoppinsSemiBold' textAlign='center'>Environmental Report</AppText>
             </TouchableOpacity>
             <View style={styles.box}>
-            <Image source={require('../assets/images/box/tabler_folders.png')}/>
+            <Image source={require('../../assets/images/box/tabler_folders.png')}/>
                 <AppText fontSize={width*0.035} fontFamily='PoppinsSemiBold' textAlign='center'>Safety Folder</AppText>
             </View>
             <TouchableOpacity style={styles.box}
@@ -63,15 +63,15 @@ return (
                     screen:routes.SECURITY_BOOKINGS,
                     params:{item:''}})
             }}>
-            <Image source={require('../assets/images/box/Vector.png')}/>
+            <Image source={require('../../assets/images/box/Vector.png')}/>
                 <AppText fontSize={width*0.035} fontFamily='PoppinsSemiBold' textAlign='center'>Security Bookings</AppText>
             </TouchableOpacity>
             <View style={styles.box}>
-            <Image source={require('../assets/images/box/twemoji_person.png')}/>
+            <Image source={require('../../assets/images/box/twemoji_person.png')}/>
                 <AppText fontSize={width*0.035} fontFamily='PoppinsSemiBold' textAlign='center'>Missing Person</AppText>
             </View>
             <View style={styles.box}>
-            <Image source={require('../assets/images/box/fluent-emoji-flat_person-light.png')}/>
+            <Image source={require('../../assets/images/box/fluent-emoji-flat_person-light.png')}/>
                 <AppText fontSize={width*0.035} fontFamily='PoppinsSemiBold' textAlign='center'>Missing Person</AppText>
             </View>
         </View>

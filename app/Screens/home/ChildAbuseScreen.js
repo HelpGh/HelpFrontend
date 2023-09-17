@@ -3,20 +3,20 @@ import { View, StyleSheet,Image, ScrollView, TouchableOpacity } from 'react-nati
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 
-import AppText from '../components/AppText';
-import AppHeader from '../components/AppHeader';
+import AppText from '../../components/AppText';
+import AppHeader from '../../components/AppHeader';
 import Constants from 'expo-constants';
-import useAuth from '../auth/useAuth';
-import AppTextInput from '../components/AppTextInput';
-import AppPicker from '../components/AppPicker';
-import pickersData from '../config/pickersData';
-import AppDatePicker from '../components/AppDatePicker';
+import useAuth from '../../auth/useAuth';
+import AppTextInput from '../../components/AppTextInput';
+import AppPicker from '../../components/AppPicker';
+import pickersData from '../../config/pickersData';
+import AppDatePicker from '../../components/AppDatePicker';
 
-import useDateAndTime from '../hooks/useDateAndTime';
-import colors from '../config/colors';
-import AppButton from '../components/AppButton';
-import AppImagePicker from '../components/ImagePicker';
-import routes from '../navigation/routes';
+import useDateAndTime from '../../hooks/useDateAndTime';
+import colors from '../../config/colors';
+import AppButton from '../../components/AppButton';
+import AppImagePicker from '../../components/ImagePicker';
+import routes from '../../navigation/routes';
 
 function ChildAbuseScreen({navigation}) {
     const {width,height}=useAuth();

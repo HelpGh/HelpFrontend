@@ -3,12 +3,12 @@ import { View, StyleSheet, ScrollView,TextInput, FlatList } from 'react-native';
 import { MaterialCommunityIcons,FontAwesome,FontAwesome5 } from '@expo/vector-icons';
 
 
-import AppHeader from '../components/AppHeader';
+import AppHeader from '../../components/AppHeader';
 import Constants from 'expo-constants';
-import useAuth from '../auth/useAuth';
-import colors from '../config/colors';
-import AppText from '../components/AppText';
-import AppTextInput from '../components/AppTextInput';
+import useAuth from '../../auth/useAuth';
+import colors from '../../config/colors';
+import AppText from '../../components/AppText';
+import AppTextInput from '../../components/AppTextInput';
 
 
 const data = [
