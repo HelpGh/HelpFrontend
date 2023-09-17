@@ -8,6 +8,7 @@ import AppHeader from '../components/AppHeader';
 import Constants from 'expo-constants';
 import useAuth from '../auth/useAuth';
 import colors from '../config/colors';
+import WhiteCard from '../components/WhiteCard';
 
 function EnvironmentalReportScreen(props) {
     const {width}=useAuth();
@@ -28,46 +29,19 @@ return (
         <AppText marginVertical='5%' alignSelf='center' fontFamily='PoppinsSemiBold' fontSize={width*0.06}>Feel Free and Fill Free</AppText>
 
         <View style={{marginVertical:'3%',width:width*0.9,flexDirection:'row',justifyContent:'space-between'}}>
-            <TouchableOpacity style={{justifyContent:'center',alignItems:'center',width:width*0.27,height:width*0.45,borderRadius:width*0.05,backgroundColor:colors.white}}>
-                <Image source={require('../assets/images/report/Vector4.png')}/>
-                <AppText textAlign='center' fontFamily='PoppinsSemiBold'>Spoilt Traffic Light</AppText>
-            </TouchableOpacity>
-            <TouchableOpacity style={{justifyContent:'center',alignItems:'center',width:width*0.27,height:width*0.45,borderRadius:width*0.05,backgroundColor:colors.white}}>
-                <Image source={require('../assets/images/report/Vector5.png')}/>
-                <AppText textAlign='center' fontFamily='PoppinsSemiBold'>Crime</AppText>
-            </TouchableOpacity>
-            <TouchableOpacity style={{justifyContent:'center',alignItems:'center',width:width*0.27,height:width*0.45,borderRadius:width*0.05,backgroundColor:colors.white}}>
-                <Image source={require('../assets/images/report/map_female.png')}/>
-               <AppText textAlign='center' fontFamily='PoppinsSemiBold'>Female Abuse</AppText>
-            </TouchableOpacity>
+            <WhiteCard ImageUrl={require('../assets/images/report/Vector4.png')} text='Spoilt Traffic Light'/>
+            <WhiteCard ImageUrl={require('../assets/images/report/Vector5.png')} text='Crime'/>
+            <WhiteCard ImageUrl={require('../assets/images/report/map_female.png')} text='Female Abuse'/>
         </View>
         <View style={{marginVertical:'3%',width:width*0.9,flexDirection:'row',justifyContent:'space-between'}}>
-            <TouchableOpacity style={{justifyContent:'center',alignItems:'center',width:width*0.27,height:width*0.45,borderRadius:width*0.05,backgroundColor:colors.white}}>
-                <Image source={require('../assets/images/report/Vector3.png')}/>
-                <AppText textAlign='center' fontFamily='PoppinsSemiBold'>Missing Car</AppText>
-            </TouchableOpacity>
-            <TouchableOpacity style={{justifyContent:'center',alignItems:'center',width:width*0.27,height:width*0.45,borderRadius:width*0.05,backgroundColor:colors.white}}>
-                <Image source={require('../assets/images/report/Vector1.png')}/>
-                <AppText textAlign='center' fontFamily='PoppinsSemiBold'>Missing Person</AppText>
-            </TouchableOpacity>
-            <TouchableOpacity style={{justifyContent:'center',alignItems:'center',width:width*0.27,height:width*0.45,borderRadius:width*0.05,backgroundColor:colors.white}}>
-                <Image source={require('../assets/images/report/Group.png')}/>
-               <AppText textAlign='center' fontFamily='PoppinsSemiBold'>Reckless Driving</AppText>
-            </TouchableOpacity>
+        <WhiteCard ImageUrl={require('../assets/images/report/Vector3.png')} text='Missing Car'/>
+        <WhiteCard ImageUrl={require('../assets/images/report/Vector1.png')} text='Missing Person'/>
+        <WhiteCard ImageUrl={require('../assets/images/report/Group.png')} text='Reckless Driving'/>
         </View>
         <View style={{marginVertical:'3%',width:width*0.9,flexDirection:'row',justifyContent:'space-between'}}>
-            <TouchableOpacity style={{justifyContent:'center',alignItems:'center',width:width*0.27,height:width*0.45,borderRadius:width*0.05,backgroundColor:colors.white}}>
-                <Image source={require('../assets/images/report/Vector2.png')}/>
-                <AppText textAlign='center' fontFamily='PoppinsSemiBold'>Road Block</AppText>
-            </TouchableOpacity>
-            <TouchableOpacity style={{justifyContent:'center',alignItems:'center',width:width*0.27,height:width*0.45,borderRadius:width*0.05,backgroundColor:colors.white}}>
-                <Image source={require('../assets/images/report/Vector6.png')}/>
-                <AppText textAlign='center' fontFamily='PoppinsSemiBold'>Wanted Person</AppText>
-            </TouchableOpacity>
-            <TouchableOpacity style={{justifyContent:'center',alignItems:'center',width:width*0.27,height:width*0.45,borderRadius:width*0.05,backgroundColor:colors.white}}>
-                <Image source={require('../assets/images/report/Vector.png')}/>
-               <AppText textAlign='center' fontFamily='PoppinsSemiBold'>Track Me</AppText>
-            </TouchableOpacity>
+        <WhiteCard ImageUrl={require('../assets/images/report/Vector2.png')} text='Road Block'/>
+        <WhiteCard ImageUrl={require('../assets/images/report/Vector6.png')} text='Wanted Person'/>
+        <WhiteCard ImageUrl={require('../assets/images/report/Vector.png')} text='Track Me'/>
         </View>
         
     </View>

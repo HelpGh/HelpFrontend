@@ -1,12 +1,6 @@
 import { MaterialIcons,MaterialCommunityIcons } from '@expo/vector-icons';
 
-// const Category = [
-//     {imageUri:require('../assets/images/cat1.png'),label:'BarberShop',value:'barber',snippet:'85 Places',id:1},
-//         {imageUri:require('../assets/images/cat2.png'),label:'Salon',value:'salon',snippet:'85 Places',id:2},
-//         {imageUri:require('../assets/images/cat3.png'),label:'Spa',value:'spa',snippet:'85 Places',id:3},
-//         {imageUri:require('../assets/images/cat4.png'),label:'Make-Up',value:'makeup',snippet:'85 Places',id:4},
-//         {imageUri:require('../assets/images/cat5.png'),label:'Photographers',value:'Photographers',snippet:'85 Places',id:5},
-//   ];
+
 const Region = [
          {
             id:1,

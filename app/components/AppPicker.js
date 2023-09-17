@@ -16,7 +16,7 @@ function AppPicker({items,placeholder,onSelectedItem,selectedItem,title='title',
 return (
 <View style={{width:'90%',...otherprop}}>
     <AppText fontFamily='PoppinsSemiBold' fontSize={width*0.035}>{title}</AppText>
-        <TouchableOpacity style={{flexDirection:'row',borderRadius:5,borderWidth:1,borderColor:colors.secondary,alignItems:'center',paddingLeft:'3%',padding:padding?padding:'3%',backgroundColor:colors.white}}
+        <TouchableOpacity style={{flexDirection:'row',borderRadius:10,borderWidth:1,borderColor:colors.secondary,alignItems:'center',paddingLeft:'3%',padding:padding?padding:'2%',backgroundColor:colors.white}}
         onPress={()=>setModal(true)}>
             <AppText flex={1}>{selectedItem ? selectedItem.label : placeholder}</AppText>
             <Ionicons name="chevron-down" size={24} color="black" />

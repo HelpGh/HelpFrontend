@@ -7,8 +7,9 @@ import Constants from 'expo-constants';
 
 import colors from '../../config/colors';
 import AppButton from '../../components/AppButton';
+import routes from '../../navigation/routes';
 
-function EmergencyContactScreen() {
+function EmergencyContactScreen({navigation}) {
     const {width,height}=useAuth();
 return (
 <View style={styles.container}>
@@ -33,7 +34,8 @@ return (
 
     <View style={{width:'90%',alignItems:'center'}}>
         <AppText fontFamily='PoppinsSemiBold'>Helpedful is here to Secure You</AppText>
-        <AppButton borderRadius={width*0.1}  width='95%' text={'Login'}/>
+        <AppButton  width='95%' text={'Login'} padding={width*0.01} Size={width*0.055}
+        onPress={()=>navigation.navigate(routes.LOGIN)}/>
     </View>
 </View>
 );

@@ -15,7 +15,7 @@ import EnvironmentalReportScreen from "../Screens/EnvironmentalReportScreen";
 import HomeScreen from "../Screens/HomeScreen";
 import SecurityBookingsFormScreen from "../Screens/SecurityBookingsFormScreen";
 import SecurityBookingsScreen from "../Screens/SecurityBookingsScreen";
-import WelcomeScreen from "../Screens/WelcomeScreen";
+import WelcomeScreen from "../Screens/auth/WelcomeScreen";
 import ChildAbuseScreen from "../Screens/ChildAbuseScreen";
 
 const LoadingStackScreen =({ navigation })=> <LoadingScreen navigation={navigation}/>

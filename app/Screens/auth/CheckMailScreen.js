@@ -7,12 +7,14 @@ import useAuth from '../../auth/useAuth';
 import colors from '../../config/colors';
 import AppTextInput from '../../components/AppTextInput';
 import AppButton from '../../components/AppButton';
+import { useTheme } from '../../hooks/ThemeContext';
 
 
 function CheckMailScreen(props) {
     const {width,height}=useAuth();
+    const {theme}=useTheme();
 return (
-<View style={styles.container}>
+<View style={[styles.container,{backgroundColor:theme.backgroundColor}]}>
     <View style={{width:width*0.1,height:width*0.1,backgroundColor:colors.secondary,borderRadius:30,justifyContent:'center',alignItems:'center',paddingRight:'1%',alignSelf:'flex-start',marginLeft:'5%'}}>
 <Ionicons name="ios-chevron-back-sharp" size={width*0.08} color={colors.primary} />
     </View>
@@ -36,7 +38,7 @@ flex:1,
 // justifyContent:'center',
  alignItems:'center',
  marginTop:Constants.statusBarHeight,
- backgroundColor:colors.primary
+//  backgroundColor:colors.primary
 }
 });
 

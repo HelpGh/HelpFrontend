@@ -10,8 +10,9 @@ import useAuth from '../auth/useAuth';
 import colors from '../config/colors';
 import ImageCard from '../components/ImageCard';
 import ViewAll from '../components/ViewAll';
+import routes from '../navigation/routes';
 
-function SecurityBookingsScreen(props) {
+function SecurityBookingsScreen({navigation}) {
     const {width}=useAuth();
 return (
 <ScrollView contentContainerStyle={styles.container}>
@@ -33,33 +34,38 @@ return (
     <ViewAll marginBottom='0%' title='Security Guard'/>
 
     <View style={{marginVertical:'3%',width:width*0.9,flexDirection:'row',justifyContent:'space-between'}}>
-            <ImageCard title={'House Guard'} image={require('../assets/images/rec/Rectangle63.png')} scaleX={0.55} scaleY={0.7}/>
-            <ImageCard title={'Office Guard'} image={require('../assets/images/rec/Rectangle71.png')} scaleX={0.55} scaleY={0.7}/>
-            <ImageCard title={'Occasion Guard'} image={require('../assets/images/rec/Rectangle72.png')} scaleX={0.55} scaleY={0.7}/>
+            <ImageCard title={'House Guard'} image={require('../assets/images/rec/Rectangle63.png')} scaleX={0.5} scaleY={0.5}
+            onPress={()=>{
+                navigation.navigate(routes.HOMETAB,{
+                    screen:routes.SECURITY_BOOKINGS_FORM,
+                    params:{item:''}})
+            }}/>
+            <ImageCard title={'Office Guard'} image={require('../assets/images/rec/Rectangle71.png')} scaleX={0.5} scaleY={0.5}/>
+            <ImageCard title={'Occasion Guard'} image={require('../assets/images/rec/Rectangle72.png')} scaleX={0.5} scaleY={0.5}/>
     </View>
 
 
     <ViewAll marginBottom='0%' title='Security Installation'/>
 
     <View style={{marginVertical:'3%',width:width*0.9,flexDirection:'row',justifyContent:'space-between'}}>
-            <ImageCard title={'CCTV Installation'} image={require('../assets/images/rec/Rectangle26.png')} scaleX={0.55} scaleY={0.7}/>
-            <ImageCard title={'Electic Fence'} image={require('../assets/images/rec/Rectangle75.png')} scaleX={0.55} scaleY={0.7}/>
-            <ImageCard title={'Car Tracking'} image={require('../assets/images/rec/Rectangle77.png')} scaleX={0.55} scaleY={0.7}/>
+            <ImageCard title={'CCTV Installation'} image={require('../assets/images/rec/Rectangle26.png')} scaleX={0.5} scaleY={0.5}/>
+            <ImageCard title={'Electic Fence'} image={require('../assets/images/rec/Rectangle75.png')} scaleX={0.5} scaleY={0.5}/>
+            <ImageCard title={'Car Tracking'} image={require('../assets/images/rec/Rectangle77.png')} scaleX={0.5} scaleY={0.5}/>
     </View>
     
     <ViewAll marginBottom='0%' title='Cyber Security'/>
 
     <View style={{marginVertical:'3%',width:width*0.9,flexDirection:'row',justifyContent:'space-between'}}>
-            <ImageCard title={'Network Security'} image={require('../assets/images/rec/Rectangle74.png')} scaleX={0.55} scaleY={0.7}/>
-            <ImageCard title={'Cloud Security'} image={require('../assets/images/rec/Rectangle76.png')} scaleX={0.55} scaleY={0.7}/>
-            <ImageCard title={'Application Security'} image={require('../assets/images/rec/Rectangle78.png')} scaleX={0.55} scaleY={0.7}/>
+            <ImageCard title={'Network Security'} image={require('../assets/images/rec/Rectangle74.png')} scaleX={0.5} scaleY={0.5}/>
+            <ImageCard title={'Cloud Security'} image={require('../assets/images/rec/Rectangle76.png')} scaleX={0.5} scaleY={0.5}/>
+            <ImageCard title={'Application Security'} image={require('../assets/images/rec/Rectangle78.png')} scaleX={0.5} scaleY={0.5}/>
     </View>
 
         
         
     </View>
 
-    <View style={{height:Constants.statusBarHeight*1.5}}></View>
+    <View style={{height:Constants.statusBarHeight*2.5}}></View>
 </ScrollView>
 );
 }

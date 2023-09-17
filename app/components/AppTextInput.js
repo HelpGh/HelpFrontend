@@ -4,7 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import useAuth from '../auth/useAuth';
 import colors from '../config/colors';
 
-function AppTextInput({placeholder,padding='3%',borderRadius=5,textContentType,onChangeText,onBlur,value,touched,errors,secureTextEntry=false,keyboardType='default',IconGroup,IconName,IconSize='24',multiline=false,maxLength,...others}) {
+function AppTextInput({placeholder,padding='2%',borderRadius=10,textContentType,onChangeText,onBlur,value,touched,errors,secureTextEntry=false,keyboardType='default',IconGroup,IconName,IconSize='24',multiline=false,maxLength,...others}) {
 
     const {width} = useAuth()
 return (

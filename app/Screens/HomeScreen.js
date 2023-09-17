@@ -44,10 +44,15 @@ return (
                 <Image source={require('../assets/images/box/healthicons_child-care.png')}/>
                 <AppText fontSize={width*0.035} fontFamily='PoppinsSemiBold' textAlign='center'>Child Report</AppText>
             </TouchableOpacity>
-            <View style={styles.box}>
+            <TouchableOpacity style={styles.box}
+            onPress={()=>{
+                navigation.navigate(routes.HOMETAB,{
+                    screen:routes.ENVIRONMENTAL_REPORT,
+                    params:{item:''}})
+            }}>
             <Image source={require('../assets/images/box/env.png')}/>
                 <AppText fontSize={width*0.035} fontFamily='PoppinsSemiBold' textAlign='center'>Environmental Report</AppText>
-            </View>
+            </TouchableOpacity>
             <View style={styles.box}>
             <Image source={require('../assets/images/box/tabler_folders.png')}/>
                 <AppText fontSize={width*0.035} fontFamily='PoppinsSemiBold' textAlign='center'>Safety Folder</AppText>

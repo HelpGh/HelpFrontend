@@ -10,8 +10,10 @@ import AppTextInput from '../../components/AppTextInput';
 import AppButton from '../../components/AppButton';
 import AppPicker from '../../components/AppPicker';
 import pickersData from '../../config/pickersData';
+import AppHeader from '../../components/AppHeader';
+import routes from '../../navigation/routes';
 
-function EmergencyScreen(props) {
+function EmergencyScreen({navigation}) {
     const {width,height}=useAuth();
     const [selectedItem,setSelectedItem]=useState(pickersData.Department[0]);
     const [selectedRegion,setSelectedRegion]=useState(pickersData.Region[0]);
@@ -26,14 +28,15 @@ function EmergencyScreen(props) {
 
 return (
 <ScrollView contentContainerStyle={styles.container}>
-    <View style={{width:'90%',flexDirection:'row',alignItems:'center',justifyContent:'space-between',marginBottom:'3%'}}>
+    {/* <View style={{width:'90%',flexDirection:'row',alignItems:'center',justifyContent:'space-between',marginBottom:'3%'}}>
     <Ionicons name="ios-chevron-back-sharp" size={width*0.08} color={colors.primary} style={{padding:'0.5%',backgroundColor:colors.secondary,borderRadius:30,}} />
     <AppText fontFamily='PoppinsSemiBold'>Emergency Contacts</AppText>
     <View style={{flexDirection:'row'}}>
     <Ionicons name="ios-search-outline" size={width*0.08} color={colors.secondary} />
     <MaterialCommunityIcons name="bell" size={width*0.08} color={colors.secondary} />
     </View>
-    </View>
+    </View> */}
+    <AppHeader title={'Emergency Contacts'}/>
 
     <ImageBackground
     source={require('../../assets/images/Rectangle80.png')}
@@ -56,7 +59,7 @@ return (
         <AppPicker items={pickersData.Region} placeholder={pickersData.Region[0].label} selectedItem={selectedRegion} onSelectedItem={OnSelectedRegion} title='Region' marginTop='3%'/>
         <AppPicker items={pickersData.Region} placeholder={pickersData.Region[0].label} selectedItem={selectedRegion} onSelectedItem={OnSelectedRegion} title='Region' marginTop='3%'/>
 
-        <AppButton text={'Search'} width='50%'/>
+        <AppButton text={'Search'} width='50%' Size={width*0.045} onPress={()=>navigation.navigate(routes.EMERGENCYCONTACTS)}/>
 </ScrollView>
 );
 }

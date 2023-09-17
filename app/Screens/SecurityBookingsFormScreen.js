@@ -44,8 +44,8 @@ return (
         <AppTextInput placeholder={'Write brief description'}/> 
     </View>
 
-    <AppButton width={'50%'} Size={width*0.05} text={'Add to cart'}/>
-    <AppButton width={'50%'} Size={width*0.05} text={'Checkout'}/>
+    <AppButton width={'50%'} Size={width*0.045} text={'Add to cart'}/>
+    <AppButton width={'50%'} Size={width*0.045} text={'Checkout'}/>
 
     <View style={{height:Constants.statusBarHeight*1.5}}></View>
 </ScrollView>

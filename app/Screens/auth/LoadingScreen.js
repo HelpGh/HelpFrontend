@@ -1,11 +1,20 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 import colors from '../../config/colors';
 import useAuth from '../../auth/useAuth';
+import routes from '../../navigation/routes';
 
-function LoadingScreen() {
+function LoadingScreen({navigation}) {
     const {width} = useAuth();
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          // Navigate to the next screen after 5 seconds
+          navigation.navigate(routes.WELCOME)
+        }, 5000); // 5000 milliseconds = 5 seconds
+    
+        return () => clearTimeout(timer);
+      }, [navigation]);
 return (
 <View style={styles.container}>
         <Image source={require('../../assets/images/log.png')} style={{resizeMode:'contain',width:width*0.3}}/>

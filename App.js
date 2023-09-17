@@ -12,7 +12,8 @@ import * as SplashScreen from 'expo-splash-screen';
 import NetInfo,{useNetInfo} from '@react-native-community/netinfo';
 import OfflineNotice from './app/components/OfflineNotice';
 import { useFonts } from 'expo-font';
-
+// import { ThemeProvider } from './ThemeContext'; // Import the ThemeProvider
+import {ThemeProvider} from './app/hooks/ThemeContext'
 
 export default function App() {
   const window = Dimensions.get('window');
@@ -64,10 +65,12 @@ console.log("Goo");
 console.log('====================================');
   return (
     <AuthContext.Provider value={{user,setUser,width,height }}>
+       <ThemeProvider>
      <NavigationContainer onReady={onNavigationContainerReady}>
-      {user ?<AuthNavigator/> : <AppNavigator width={width}/>}
+      {user ? <AppNavigator width={width}/> : <AuthNavigator/>}
      </NavigationContainer>
      <OfflineNotice/>
+     </ThemeProvider>
     </AuthContext.Provider>
   )
 }

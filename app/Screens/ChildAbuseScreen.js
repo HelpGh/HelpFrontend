@@ -16,6 +16,7 @@ import useDateAndTime from '../hooks/useDateAndTime';
 import colors from '../config/colors';
 import AppButton from '../components/AppButton';
 import AppImagePicker from '../components/ImagePicker';
+import routes from '../navigation/routes';
 
 function ChildAbuseScreen({navigation}) {
     const {width,height}=useAuth();
@@ -61,7 +62,11 @@ return (
     <AppText marginTop='1%' fontFamily='PoppinsSemiBold'>Contact Detail*</AppText>
     <AppTextInput placeholder={"123456789"} padding='1%'/>
 
-    <AppButton text={"Confirm"} width='40%' alignSelf='flex-end' Size={width*0.04}/>
+    <AppButton text={"Confirm"} width='40%' alignSelf='flex-end' Size={width*0.04} onPress={()=>{
+        navigation.navigate(routes.HOMETAB,{
+            screen:routes.CHAT,
+            params:{item:''}})
+    }}/>
 
 
     

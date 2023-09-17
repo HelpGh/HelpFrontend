@@ -10,10 +10,10 @@ function ViewAll({title='title',...other}) {
     const {width}=useAuth();
 return (
 <View style={[styles.container,{...other}]}>
-        <AppText fontSize={width*0.05} fontFamily='PoppinsSemiBold'>{title}</AppText>
+        <AppText fontSize={width*0.045} fontFamily='PoppinsSemiBold'>{title}</AppText>
         <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between'}}>
 
-        <AppText fontSize={width*0.045} fontFamily='PoppinsSemiBold' color={colors.secondary}>View all</AppText>
+        <AppText fontSize={width*0.04} fontFamily='PoppinsSemiBold' color={colors.secondary}>View all</AppText>
         <Ionicons name="ios-chevron-forward-sharp" size={width*0.06} color={colors.secondary} />
         </View>
     </View>

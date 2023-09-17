@@ -2,18 +2,20 @@ import React, { useState } from 'react';
 import { Dimensions,View, StyleSheet, TextInput,Text, TouchableOpacity } from 'react-native';
 import { FontAwesome5,MaterialIcons } from '@expo/vector-icons';
 import colors from '../config/colors';
+import useAuth from '../auth/useAuth';
 
 
 function AppTextInputPassword({ onChangeText, value, placeholder, keyboardType, onBlur, touched, errors,...other }) {
 
   const [viewPassword,setViewPassword]= useState(false);
-  const screenWidth = Dimensions.get('window').width;
+  const {width}=useAuth()
+  // const width = Dimensions.get('window').width;
   const screenHeight = Dimensions.get('window').height;
 return (
   <>
-<View style={[styles.scrowCard,{padding:screenWidth*0.03,...other}]}>
+<View style={[styles.scrowCard,{padding:width*0.03,...other}]}>
 
-<MaterialIcons name="lock" size={24} color="#bbb" />
+<MaterialIcons name="lock" size={width*0.06} color="#bbb" />
       <TextInput
         onChangeText={onChangeText}
         value={value}
@@ -26,8 +28,8 @@ return (
         spellCheck={false}
       />
       <TouchableOpacity onPress={()=>setViewPassword(!viewPassword)}>
-      {viewPassword&&<FontAwesome5 name="eye-slash" size={20} color="#bbb" />}
-      {!viewPassword&&<FontAwesome5 name="eye" size={20} color="#bbb" />}
+      {viewPassword&&<FontAwesome5 name="eye-slash" size={width*0.055} color="#bbb" />}
+      {!viewPassword&&<FontAwesome5 name="eye" size={width*0.055} color="#bbb" />}
       </TouchableOpacity>
       </View>
       <Text style={{color:'red'}}>{touched && errors}</Text>
@@ -41,6 +43,7 @@ const styles = StyleSheet.create({
         width:'100%',
         borderRadius:10,
         flexDirection:'row',
+        alignItems:'center',
         padding:10,
         borderWidth:1,
         borderColor:colors.secondary,
