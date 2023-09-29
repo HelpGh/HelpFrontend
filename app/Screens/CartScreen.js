@@ -50,7 +50,6 @@ container:{
 // justifyContent:'center',
  alignItems:'center',
  height:'100%',
- marginTop:Constants.statusBarHeight,
  backgroundColor:colors.primary
 },
 total:{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}

@@ -1,7 +1,13 @@
 import React, { createContext, useState, useContext } from 'react';
 import colors from '../config/colors';
 const lightTheme = {
-    backgroundColor: colors.primary,
+    primary:'#D8E1EF',
+    secondary:'#0E6AE0FC',
+    white:'#fff',
+    medium:'#675757',
+    active:'#020E7E',
+    dark: "#2c2c2c",
+    grey:'#535353ce',
     textColor: colors.dark,
     // Add other styles for the light theme
   };

@@ -14,6 +14,7 @@ import OfflineNotice from './app/components/OfflineNotice';
 import { useFonts } from 'expo-font';
 // import { ThemeProvider } from './ThemeContext'; // Import the ThemeProvider
 import {ThemeProvider} from './app/hooks/ThemeContext'
+import AppStatusBar from './app/components/AppStatusBar';
 
 export default function App() {
   const window = Dimensions.get('window');
@@ -67,7 +68,8 @@ console.log('====================================');
     <AuthContext.Provider value={{user,setUser,width,height }}>
        <ThemeProvider>
      <NavigationContainer onReady={onNavigationContainerReady}>
-      {user ? <AppNavigator width={width}/> : <AuthNavigator/>}
+     <AppStatusBar/>
+      {user ? <AuthNavigator/> :<AppNavigator width={width}/> }
      </NavigationContainer>
      <OfflineNotice/>
      </ThemeProvider>

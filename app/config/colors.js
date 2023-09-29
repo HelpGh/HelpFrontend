@@ -5,4 +5,5 @@ export default {
     medium:'#675757',
     active:'#020E7E',
     dark: "#2c2c2c",
+    grey:'#535353ce'
 }

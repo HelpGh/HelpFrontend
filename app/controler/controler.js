@@ -17,6 +17,9 @@ import SecurityBookingsFormScreen from "../Screens/home/SecurityBookingsFormScre
 import SecurityBookingsScreen from "../Screens/home/SecurityBookingsScreen";
 import WelcomeScreen from "../Screens/auth/WelcomeScreen";
 import ChildAbuseScreen from "../Screens/home/ChildAbuseScreen";
+import SafetyScreen from "../Screens/home/SafetyScreen";
+import CreateNewFileScreen from "../Screens/home/CreateNewFile";
+import MissingPeopleScreen from "../Screens/home/MissingPeopleScreen";
 
 const LoadingStackScreen =({ navigation })=> <LoadingScreen navigation={navigation}/>
 const WelcomeStackScreen =({ navigation })=> <WelcomeScreen navigation={navigation}/>
@@ -38,6 +41,9 @@ const CheckMailStackScreen =({ navigation })=> <CheckMailScreen navigation={navi
   const SecurityBookingsFormStackScreen=({ navigation,route }) =><SecurityBookingsFormScreen navigation={navigation} route={route}/>
   const CartStackScreen=({ navigation,route }) =><CartScreen navigation={navigation} route={route}/>
   const ChatStackScreen=({ navigation,route }) =><ChatScreen navigation={navigation} route={route}/>
+  const CreateNewFileStackScreen=({ navigation,route }) =><CreateNewFileScreen navigation={navigation} route={route}/>
+  const SafetyStackScreen=({ navigation,route }) =><SafetyScreen navigation={navigation} route={route}/>
+  const MissingPeopleStackScreen=({ navigation,route }) =><MissingPeopleScreen navigation={navigation} route={route}/>
  
 
 
@@ -63,5 +69,8 @@ const CheckMailStackScreen =({ navigation })=> <CheckMailScreen navigation={navi
     HomeStackScreen,
     SecurityBookingsStackScreen,
     SecurityBookingsFormStackScreen,
-    ChildAbuseStackScreen
+    ChildAbuseStackScreen,
+    SafetyStackScreen,
+    CreateNewFileStackScreen,
+    MissingPeopleStackScreen
   }

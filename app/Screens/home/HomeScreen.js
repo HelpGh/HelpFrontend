@@ -53,10 +53,15 @@ return (
             <Image source={require('../../assets/images/box/env.png')}/>
                 <AppText fontSize={width*0.035} fontFamily='PoppinsSemiBold' textAlign='center'>Environmental Report</AppText>
             </TouchableOpacity>
-            <View style={styles.box}>
+            <TouchableOpacity style={styles.box}
+             onPress={()=>{
+                navigation.navigate(routes.HOMETAB,{
+                    screen:routes.SAFETY,
+                    params:{item:''}})
+            }}>
             <Image source={require('../../assets/images/box/tabler_folders.png')}/>
                 <AppText fontSize={width*0.035} fontFamily='PoppinsSemiBold' textAlign='center'>Safety Folder</AppText>
-            </View>
+            </TouchableOpacity>
             <TouchableOpacity style={styles.box}
             onPress={()=>{
                 navigation.navigate(routes.HOMETAB,{
@@ -66,20 +71,25 @@ return (
             <Image source={require('../../assets/images/box/Vector.png')}/>
                 <AppText fontSize={width*0.035} fontFamily='PoppinsSemiBold' textAlign='center'>Security Bookings</AppText>
             </TouchableOpacity>
-            <View style={styles.box}>
+            <TouchableOpacity style={styles.box}
+            onPress={()=>{
+                navigation.navigate(routes.HOMETAB,{
+                    screen:routes.MISSING_PEOPLE,
+                    params:{item:''}})
+            }}>
             <Image source={require('../../assets/images/box/twemoji_person.png')}/>
                 <AppText fontSize={width*0.035} fontFamily='PoppinsSemiBold' textAlign='center'>Missing Person</AppText>
-            </View>
+            </TouchableOpacity>
             <View style={styles.box}>
             <Image source={require('../../assets/images/box/fluent-emoji-flat_person-light.png')}/>
-                <AppText fontSize={width*0.035} fontFamily='PoppinsSemiBold' textAlign='center'>Missing Person</AppText>
+                <AppText fontSize={width*0.035} fontFamily='PoppinsSemiBold' textAlign='center'>Wanted Person</AppText>
             </View>
         </View>
     </ImageBackground>
-    <ViewAll title='Updates' marginTop='20%'/>
+    <ViewAll title='Updates' marginTop='20%' width={'95%'}/>
     <AppScrowEmojis/>
     
-    <ViewAll title='Popular Bookings' marginTop='5%' />
+    <ViewAll title='Popular Bookings' marginTop='5%' width={'95%'}/>
     <AppScrowImages/>
     <View style={{width:width,height:Constants.statusBarHeight*1.5}}></View>
 </ScrollView>
@@ -92,7 +102,6 @@ container:{
 // flex:1,
 // justifyContent:'center',
  alignItems:'center',
- marginTop:Constants.statusBarHeight,
  backgroundColor:colors.primary,
 //  paddingBottom:Constants.statusBarHeight
 },

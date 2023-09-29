@@ -48,6 +48,5 @@ flex:1,
 // justifyContent:'center',
  alignItems:'center',
  backgroundColor:colors.primary,
- marginTop:Constants.statusBarHeight
 }
 });

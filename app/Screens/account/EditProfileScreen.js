@@ -96,6 +96,5 @@ container:{
 // justifyContent:'center',
  alignItems:'center',
  backgroundColor:colors.primary,
- marginTop:Constants.statusBarHeight
 }
 });

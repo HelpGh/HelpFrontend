@@ -106,7 +106,6 @@ container:{
 flex:1,
 // justifyContent:'center',
 //  alignItems:'center',
- marginTop:Constants.statusBarHeight
 },
 chat:{
     backgroundColor:'#D9D9D9',

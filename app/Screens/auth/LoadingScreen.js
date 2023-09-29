@@ -17,7 +17,7 @@ function LoadingScreen({navigation}) {
       }, [navigation]);
 return (
 <View style={styles.container}>
-        <Image source={require('../../assets/images/log.png')} style={{resizeMode:'contain',width:width*0.3}}/>
+        <Image source={require('../../assets/images/logo.png')} style={{resizeMode:'contain',width:width*0.3}}/>
         <View style={{width:width*0.3,height:width*0.3,marginTop:'10%',backgroundColor:colors.secondary,borderRadius:width*0.05,justifyContent:'center',alignItems:'center'}}>
             <Entypo name="squared-plus" size={width*0.23} color={colors.white} />
         </View>

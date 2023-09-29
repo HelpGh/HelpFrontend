@@ -10,7 +10,7 @@ import GoBackButton from './GoBackButton';
 function AppHeader({title,changeBgColor=false,goBack=true,marginLeft='0%'}) {
     const {width,height}=useAuth();
 return (
-<View style={{width:'90%',flexDirection:'row',alignItems:'center',justifyContent:'space-between',marginBottom:'3%'}}>
+<View style={{width:'90%',flexDirection:'row',alignItems:'center',justifyContent:'space-between',marginBottom:'3%',paddingTop:'3%'}}>
     <GoBackButton marginLeft={marginLeft} changeBgColor={changeBgColor} goBack={goBack}/>
     <AppText fontFamily='PoppinsSemiBold' fontSize={width*0.05}>{title}</AppText>
     <View style={{flexDirection:'row'}}>

@@ -19,5 +19,8 @@ ENVIRONMENTAL_REPORT:'EnvironmentalReport',
 SECURITY_BOOKINGS:'SecurityBookings',
 SECURITY_BOOKINGS_FORM:'SecurityBookingsForm',
 CART:'Cart',
-CHAT:'Chat'
+CHAT:'Chat',
+SAFETY:'Safety',
+CREATE_NEW_FILE:'CreateNewFile',
+MISSING_PEOPLE:'MissingPeople'
 });
